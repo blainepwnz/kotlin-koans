@@ -21,6 +21,8 @@ String template entries (${42}) are allowed here.
 
 fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 
+fun getAnswerPattern() = """\d{2} ($month) \d{4}"""
+
 fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
@@ -35,4 +37,4 @@ fun todoTask5(): Nothing = TODO(
     documentation = doc5(),
     references = { getPattern(); month })
 
-fun task5(): String = todoTask5()
+fun task5(): String = getAnswerPattern()
